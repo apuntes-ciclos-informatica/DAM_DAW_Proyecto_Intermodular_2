@@ -1,0 +1,449 @@
+/* La fuente se carga desde config/colors.ts (fontImportUrl) vía <head>. */
+
+:root {
+  --content-width: 900px;
+}
+
+/* Animaciones globales */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { transform: translateX(-20px); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes floatAnimation {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glowAnimation {
+  0%, 100% { filter: drop-shadow(0 0 5px color-mix(in srgb, var(--vp-c-brand) 22%, transparent)); }
+  50% { filter: drop-shadow(0 0 15px color-mix(in srgb, var(--vp-c-brand) 40%, transparent)); }
+}
+
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Estilos base */
+.vp-doc {
+  text-align: justify;
+  text-justify: inter-word;
+  margin: 0 auto;
+  animation: fadeIn 0.6s ease-out;
+  color: var(--vp-c-text-1);
+  line-height: 1.6;
+}
+
+/* Estilos para los encabezados */
+.vp-doc h1,
+.vp-doc h2,
+.vp-doc h3,
+.vp-doc h4,
+.vp-doc h5 {
+  color: var(--vp-c-brand);
+}
+
+.vp-doc h1 {
+  font-size: 2.5rem;
+  background: linear-gradient(120deg, var(--vp-c-brand), var(--vp-c-brand-2));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: var(--vp-c-text-1);
+  margin-bottom: 2rem;
+}
+
+.vp-doc h2,
+.vp-doc h3 {
+  border-bottom: 2px solid var(--vp-c-brand-3);
+  padding-bottom: 0.5rem;
+  margin: 2.5rem 0 1.5rem;
+}
+
+.vp-doc h2 {
+  font-size: 1.8rem;
+}
+
+.vp-doc h3 {
+  font-size: 1.5rem; /* Asumiendo un tamaño ligeramente menor para h3 */
+}
+
+.vp-doc h4,
+.vp-doc h5 {
+  font-weight: 700;
+}
+
+/* Contenedores personalizados */
+.tip, .info {
+  background: var(--custom-gradient-bg-white);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1.5rem 0;
+  box-shadow: var(--custom-shadow-sm);
+  animation: scaleIn 0.6s ease-out;
+  border-left: 4px solid var(--vp-c-brand);
+  transition: transform var(--custom-duration-base) var(--custom-ease-out);
+}
+
+.tip:hover, .info:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--custom-shadow-float);
+}
+
+/* Mejoras en los containers personalizados */
+.custom-block {
+  border: none !important;
+  border-radius: 12px !important;
+  margin: 2rem 0;
+  padding: 1.5rem !important;
+  border-left-width: 4px !important;
+  border-left-style: solid !important;
+}
+
+.custom-block.note {
+  background: var(--custom-gradient-note) !important;
+  border-color: var(--vp-c-note) !important;
+}
+
+.custom-block.tip {
+  background: var(--custom-gradient-tip) !important;
+  border-color: var(--vp-c-tip) !important;
+}
+
+.custom-block.important {
+  background: var(--custom-gradient-important) !important;
+  border-color: var(--vp-c-important) !important;
+}
+
+.custom-block.warning {
+  background: var(--custom-gradient-warning) !important;
+  border-color: var(--vp-c-warning) !important;
+}
+
+.custom-block.caution {
+  background: var(--custom-gradient-caution) !important;
+  border-color: var(--vp-c-caution) !important;
+}
+
+.custom-block.info {
+  background: var(--custom-gradient-info) !important;
+}
+
+.custom-block.details {
+  background: var(--custom-gradient-details) !important;
+}
+
+.custom-block:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--custom-shadow-hover);
+}
+
+
+
+/* Logos */
+.logo-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem 0;
+  flex-wrap: wrap;
+}
+
+.logo-anim {
+  height: 60px;
+  margin: 1rem;
+  transition: transform 0.3s ease;
+  animation: floatAnimation 3s ease-in-out infinite;
+  filter: var(--custom-shadow-filter-light);
+}
+
+.logo-anim:hover {
+  transform: scale(1.1) rotate(-5deg);
+}
+
+/* Lista de contenidos */
+.vp-doc ul,
+.vp-doc ol {
+  margin-left: 1em;
+  padding-left: 1rem;
+}
+
+.vp-doc ul {
+  list-style:disc;
+}
+
+.vp-doc ul>li>ul {
+  list-style:circle;
+}
+
+.vp-doc ul>li>ul>li>ul {
+  list-style:square;
+}
+
+.vp-doc ol {
+  list-style: decimal;
+}
+
+.mermaid {
+  display: block;      /* assegurar que sigui un element de bloc */
+}
+
+.flowchart {
+  margin: 0 auto;  /* 1.5em d'espai vertical, calcem horitzontal automàtic */
+}
+
+.vp-doc ul li {
+  margin: 1rem 0;
+  padding-left: 1rem;
+  /*padding: 1rem;
+  background: rgba(255,255,255,0.5);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
+  animation: fadeSlideIn 0.6s ease-out;*/
+  
+}
+
+.vp-doc blockquote {
+  background-color: var(--vp-c-bg-soft);
+  color: var(--vp-c-text-1);
+  border-left: 3px solid var(--vp-c-brand);
+  margin: 1em 0;
+  padding: 1em;
+  border-radius: 0 var(--custom-radius-md) var(--custom-radius-md) 0;
+  font-size: 1.05em;
+}
+
+.dark blockquote {
+  color: var(--vp-c-text-1);
+}
+
+.vp-doc blockquote ul {
+  padding-left: 1rem;
+}
+.vp-doc blockquote ul li {
+  list-style-type: square;
+}
+
+.vp-doc ul li::before {
+  position: absolute;
+  left: 0;
+  color: var(--vp-c-brand);
+  transition: transform var(--custom-duration-base) var(--custom-ease-out);
+}
+
+/*.vp-doc ul li:hover {
+  transform: translateX(8px);
+  border-color: var(--vp-c-brand-lighter);
+  background: rgba(255,255,255,0.8);
+}*/
+/*
+.vp-doc ul li:hover::before {
+  transform: translateX(3px);
+}
+*/
+
+.vp-doc ul li a {
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  transition: color var(--custom-duration-base) var(--custom-ease-out);
+}
+/*
+.vp-doc ul li a:hover {
+  color: var(--vp-c-brand);
+}
+*/
+/* Mejoras en las listas */
+.vp-doc .details ul {
+  list-style-type: none;
+  padding-left: 0rem;
+}
+
+.vp-doc .details li {
+  list-style: symbols();
+  padding-left: 1rem;
+}
+
+/*
+.vp-doc .details li:hover {
+  transform: translateX(10px);
+  background: rgba(255,255,255,0.8);
+  border-color: var(--vp-c-brand-lighter);
+}*/
+/*
+.vp-doc .details li a {
+  display: block;
+  text-decoration: none;
+  color: var(--vp-c-text-1);
+  font-weight: 500;
+}
+
+.vp-doc .details li p {
+  margin: 0.5rem 0 0;
+  color: var(--vp-c-text-2);
+  font-size: 0.9rem;
+}
+*/
+/* Animaciones para los títulos */
+.animate-title {
+  animation: slideIn 0.6s ease-out;
+}
+
+@keyframes titleSlide {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Enlaces y Navegación */
+.vp-doc a {
+  color: var(--vp-c-brand);
+  text-decoration: none;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+}
+
+.vp-doc a:hover {
+  background-color: var(--vp-c-brand-soft);
+  color: var(--vp-c-brand-1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .vp-doc h1 {
+    font-size: 2rem;
+  }
+
+  .vp-doc h2 {
+    font-size: 1.5rem;
+  }
+
+  .custom-block {
+    margin: 1rem 0;
+    padding: 1rem !important;
+  }
+
+  .logo-anim {
+    height: 50px;
+    margin: 0.5rem;
+  }
+/*
+  .vp-doc .details li:hover {
+    transform: translateX(5px);
+  }*/
+}
+
+/* Scroll suave */
+html {
+  scroll-behavior: smooth;
+}
+
+.header-anchor {
+  display: none;
+}
+
+@media (prefers-color-scheme: dark) {
+  .VPFlyout.active a:hover {
+    color: var(--vp-c-brand-2) !important;
+  }
+  .active, .VPFlyout.active .text[data-v-7a0eaf2e], .VPSidebarItem.level-1.has-active > .item > .link > .text[data-v-3d5a5d96], .title[data-v-77f00a4c]{
+    color: var(--vp-c-brand-2) !important;
+  }
+}
+
+/* Oculta pestanyes amb títol diferent de "Java" */
+.tabs .tab-header:not(:has(button:contains("Java"))) {
+  display: none !important;
+}
+
+.tabs .tab-content > :not([data-tab="Java"]) {
+  display: none !important;
+}
+/* Mejorar contraste en bloques */
+.custom-block p,
+.custom-block li {
+  color: var(--vp-c-text-1) !important;
+}
+
+/* Asegurar legibilidad del diagrama mermaid en dark mode */
+.vp-doc .mermaid-container,
+.vp-doc .mermaid {
+  background-color: var(--vp-c-bg) !important;
+  border-radius: var(--custom-radius-md);
+  padding: 1rem;
+}
+
+/* ============================================================================
+ * Estilos para Impresión / Exportación a PDF (Modo Texto)
+ * ============================================================================ */
+@media print {
+  /* Ocultar elementos de navegación y UI que no son contenido */
+  .VPNav,
+  .VPLocalNav,
+  .VPSidebar,
+  .VPFooter,
+  .aside,
+  .VPDocAside,
+  .export-pdf-wrapper,
+  button,
+  .edit-link,
+  .last-updated,
+  .pager {
+    display: none !important;
+  }
+
+  /* Ajustar el contenedor principal para que ocupe todo el ancho sin márgenes de sidebar */
+  .VPContent,
+  .VPDoc {
+    padding: 0 !important;
+    margin: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  /* Asegurar que el fondo sea blanco y el texto negro para mejor legibilidad */
+  body {
+    background-color: white !important;
+    color: black !important;
+  }
+
+  .vp-doc {
+    color: black !important;
+  }
+
+  .vp-doc h1,
+  .vp-doc h2,
+  .vp-doc h3,
+  .vp-doc h4,
+  .vp-doc h5 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+
+  /* Evitar saltos de página dentro de bloques y tablas */
+  pre, blockquote, .custom-block, table, img, figure {
+    page-break-inside: avoid;
+  }
+}

@@ -1,0 +1,12 @@
+/* Imágenes de fondo */
+/* Las URLs se generan automáticamente desde config/project.ts (basePath).  */
+/* No hardcodees rutas aquí — edita basePath en src/.vitepress/config/project.ts */
+.cap .container.initial { background-image: var(--ejer-img-initial);     margin-top: -105px; }
+.cap .container.zero    { background-image: var(--ejer-img-zero); }
+.cap .container.first   { background-image: var(--ejer-img-first); }
+.cap .container.second  { background-image: var(--ejer-img-second); }
+.cap .container.third   { background-image: var(--ejer-img-third); }
+.cap .container.fourth  { background-image: var(--ejer-img-fourth); }
+.cap .img-first         { background-image: var(--ejer-img-img-first);   margin-top: -105px; }
+.cap .img-first_1       { background-image: var(--ejer-img-img-first-1); }
+.cap .img-first_2       { background-image: var(--ejer-img-img-first-2); }
