@@ -20,7 +20,7 @@ export const PROJECT = {
   //   '/'                   → dominio raíz (https://midominio.com/)
   //
   // ⚠️ Siempre con barras al inicio Y al final.
-  basePath: '/DAM_DAW_Proyecto_Intermodular_1/',
+  basePath: '/DAM_DAW_Proyecto_Intermodular_2/',
 
   // --------------------------------------------------------------------------
   // IDIOMA
@@ -71,7 +71,7 @@ export const PROJECT = {
   // Iconos disponibles: 'github', 'twitter', 'gitlab', 'discord', 'youtube', etc.
   // Deja el array vacío [] si no quieres mostrar ningún enlace social.
   socialLinks: [
-    { icon: 'github', link: 'https://github.com/apuntes-ciclos-informatica/DAM_DAW_Proyecto_Intermodular_1' },
+    { icon: 'github', link: 'https://github.com/apuntes-ciclos-informatica/DAM_DAW_Proyecto_Intermodular_2' },
   ] as DefaultTheme.SocialLink[],
 
   // --------------------------------------------------------------------------
