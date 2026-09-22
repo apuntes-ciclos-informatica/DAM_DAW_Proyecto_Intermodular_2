@@ -362,7 +362,7 @@ El desarrollo del proyecto se estructura en varias fases clave, comenzando con u
 * Esta fecha es **inamovible y de obligado cumplimiento** para poder ser evaluado en el módulo. No se admitirán entregas fuera de plazo bajo ninguna circunstancia.
 :::
 
-## ✅ Evaluación {.animate-title}
+## Evaluación {.animate-title}
 
 La evaluación del módulo será **continua, formativa e integradora**, centrándose en la consecución de los **Resultados de Aprendizaje (RA)** asociados al proyecto.
 
@@ -395,7 +395,7 @@ La calificación final se basa en la superación de todos los instrumentos de ev
 
 Aquí puedes consultar los detalles de cada parte evaluable.
 
-::: details 📝 Documentación
+::: details Documentación
 La documentación constituye la **tarea base** del módulo, identificada como **_[Reto 2]_**. Su desarrollo se realiza durante la **primera fase del curso** y sirve para establecer las **líneas generales del proyecto**, partiendo de la idea definida en el _[Reto 1]_.
 
 * **Contenido clave:** Debe incluir toda la **documentación técnica** necesaria para poder iniciar la fase de implementación del proyecto de manera organizada.
@@ -403,7 +403,7 @@ La documentación constituye la **tarea base** del módulo, identificada como **
 * **Evaluación:** Para la calificación, se valorará la consecución de todos los **_Criterios de Evaluación (CE)_** asociados a esta tarea en cada **_Resultado de Aprendizaje (RA)_**. Es un requisito indispensable **aprobar todos y cada uno** de ellos para superar este instrumento.
 :::
 
-::: details 📝 Proyecto
+::: details Proyecto
 Es la **tarea más importante** del módulo, no solo por su **elevado peso en la calificación**, sino porque en ella convergen gran parte de los **conocimientos adquiridos durante el ciclo**. Aunque se define en la primera fase, su implementación debe cumplir los siguientes **requerimientos mínimos**:
 
 * **Licencia y Visibilidad:** El proyecto final debe tener una **licencia libre**. Durante su desarrollo, el repositorio será **privado**, pero con **acceso garantizado para el profesor** y el tutor.
@@ -451,11 +451,11 @@ Este apartado valora la **implicación activa** del alumno, una competencia clav
 * **Durante la prueba final:** A través de la calidad de las intervenciones en la mesa redonda, **valorando y aportando feedback** argumentado a los proyectos del resto de compañeros.
 :::
 
-### 📝 Recuperación
+### Recuperación
 
 En caso de que un estudiante no obtenga más de un 5/10 en la convocatoria ordinaria, tenga algún módulo pendiente o renuncie a dicha convocatoria, podrá acceder a una segunda convocatoria a finales del mes de junio. El instrumento de calificación, así como los requisitos y protocolo serán los mismo que en la evaluación ordinaria.
 
-## 🛠️ Recursos y Herramientas {.animate-title}
+## Recursos y Herramientas {.animate-title}
 
 Durante el curso, se utilizarán diversas herramientas y recursos para facilitar el aprendizaje y la gestión del proyecto.
 
