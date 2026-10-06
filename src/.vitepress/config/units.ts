@@ -70,6 +70,26 @@ const s2Sidebar: DefaultTheme.SidebarItem[] = [
   },
 ]
 
+// ── Sesión 3 · Requisitos──────────────────────────────────
+const s3Items: DefaultTheme.SidebarItem[] = [
+  { text: 'Inicio', link: '/contenidos/' },
+  { text: '1. Requisitos', link: '/contenidos/capitulo-1-requisitos' },
+  { text: '2. Historias de usuario', link: '/contenidos/capitulo-2-historias-usuario' },
+  { text: '3. Criterios de aceptación', link: '/contenidos/capitulo-3-criterios-aceptacion' },
+  { text: '4. Estimación', link: '/contenidos/capitulo-4-estimacion' },
+  { text: '5. Invest', link: '/contenidos/capitulo-5-invest' },
+  { text: '6. Priorización', link: '/contenidos/capitulo-6-priorizacion' },
+  { text: '7. Casos vs historias', link: '/contenidos/capitulo-7-casos-vs-historias' },
+]
+
+const s3Sidebar: DefaultTheme.SidebarItem[] = [
+  {
+    text: 'Requisitos',
+    collapsed: false,
+    items: s3Items,
+  },
+]
+
 // ============================================================================
 // 2. REGISTRO DE UNIDADES
 // ============================================================================
@@ -134,6 +154,17 @@ export const UNITS: Record<string, UnitConfig> = {
     sidebar: s2Sidebar
   },
 
+  S3: {
+    id: 'S3',
+    code: 's3',         // → archivos en src/s3/
+    title: 'Sesión 3',
+    fullTitle: 'Sesión 3 · Requisitos',
+    siteTitle: 'Proyecto </br>intermodular II',
+    icon: '🏃',
+    navbar: [{ text: 'Guía Didáctica', link: '/' }],
+    sidebar: s3Sidebar
+  },
+
 }
 
 // ============================================================================
@@ -157,8 +188,10 @@ export function getUnitByCode(code: string): UnitConfig | undefined {
 // añadiendo la nueva línea al final.
 const S1 = { text: 'S1 — Fundamentos del Project Management', link: '/s1/contenidos/' }
 const S2 = { text: 'S2 — Metodologías Ágiles. Scrum',         link: '/s2/contenidos/' }
+const S3 = { text: 'S3 — Requisitos',         link: '/s3/contenidos/' }
 
 export const unitNavbars: Record<string, NavGroup[]> = {
   s1: [{ text: 'Sesiones', items: [S1] }],
   s2: [{ text: 'Sesiones', items: [S1, S2] }],
+  s3: [{ text: 'Sesiones', items: [S1, S2, S3] }],
 }
