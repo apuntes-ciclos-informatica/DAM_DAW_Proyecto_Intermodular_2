@@ -90,6 +90,28 @@ const s3Sidebar: DefaultTheme.SidebarItem[] = [
   },
 ]
 
+// ── Sesión 4 · Diagrama
+const s4Items: DefaultTheme.SidebarItem[] = [
+  { text: 'Inicio', link: '/contenidos/' },
+  { text: '1. Arquitectura del Software', link: '/contenidos/capitulo-1-arquitectura-software' },
+  { text: '2. Diagramas de alto nivel', link: '/contenidos/capitulo-2-diagramas-alto-nivel' },
+  { text: '3. Diagramas de despliegue', link: '/contenidos/capitulo-3-diagramas-infraestructura' },
+  { text: '4. Diagramas de casos de uso', link: '/contenidos/capitulo-4-diagramas-cu' },
+  { text: '5. Diagramas entidad relación', link: '/contenidos/capitulo-5-diagramas-er' },
+  { text: '6. Diagramas de secuencia', link: '/contenidos/capitulo-6-diagramas-se' },
+  { text: '7. Herramientas visuales', link: '/contenidos/capitulo-7-herramientas-visuales' },
+  { text: '8. Herramientas de código', link: '/contenidos/capitulo-8-herramientas-codigo' },
+  { text: '9. Práctica', link: '/contenidos/capitulo-9-practica' },
+]
+
+const s4Sidebar: DefaultTheme.SidebarItem[] = [
+  {
+    text: 'Diagramas',
+    collapsed: false,
+    items: s4Items,
+  },
+]
+
 // ============================================================================
 // 2. REGISTRO DE UNIDADES
 // ============================================================================
@@ -165,6 +187,17 @@ export const UNITS: Record<string, UnitConfig> = {
     sidebar: s3Sidebar
   },
 
+  S4: {
+    id: 'S4',
+    code: 's4',         // → archivos en src/s3/
+    title: 'Sesión 4',
+    fullTitle: 'Sesión 4 · Diagramas',
+    siteTitle: 'Proyecto </br>intermodular II',
+    icon: '🏃',
+    navbar: [{ text: 'Guía Didáctica', link: '/' }],
+    sidebar: s4Sidebar
+  },
+
 }
 
 // ============================================================================
@@ -189,9 +222,11 @@ export function getUnitByCode(code: string): UnitConfig | undefined {
 const S1 = { text: 'S1 — Fundamentos del Project Management', link: '/s1/contenidos/' }
 const S2 = { text: 'S2 — Metodologías Ágiles. Scrum',         link: '/s2/contenidos/' }
 const S3 = { text: 'S3 — Requisitos',         link: '/s3/contenidos/' }
+const S4 = { text: 'S4 — Diagramas',         link: '/s4/contenidos/' }
 
 export const unitNavbars: Record<string, NavGroup[]> = {
   s1: [{ text: 'Sesiones', items: [S1] }],
   s2: [{ text: 'Sesiones', items: [S1, S2] }],
   s3: [{ text: 'Sesiones', items: [S1, S2, S3] }],
+  s4: [{ text: 'Sesiones', items: [S1, S2, S3, S4] }],
 }
