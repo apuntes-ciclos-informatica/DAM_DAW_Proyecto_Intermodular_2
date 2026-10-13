@@ -1,6 +1,6 @@
-# 2. Diagramas de Alto Nivel (Visión Global y de Infraestructura)
+# 2. Diagramas de Alto Nivel
 
-## Del Concepto al Dibujo: El Problema de la Perspectiva
+## Del Concepto al Dibujo
 
 En el Capítulo 1 definimos la arquitectura de un proyecto, pero hay un problema: **esa descripción vive en texto, en nuestras cabezas**.
 
